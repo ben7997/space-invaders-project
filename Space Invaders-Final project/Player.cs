@@ -8,26 +8,35 @@ namespace Space_Invaders_Final_project
 {
     internal class Player : Entity
     {
+        private bool isLeftPress = false;
+        private bool isRightPress = false;
+        public bool LeftPress {
+            set { isLeftPress = value; }
+            get { return isLeftPress; }
+        }
+
+        public bool RightPress { 
+            set { isRightPress = value; }
+            get { return isRightPress; }
+        }
         public Player()
         {
             this.x = 202;
             this.y = 200;
             this.height = 25;
             this.width = 25;
-            this.speed = 5;
+            this.speed = 10;
         }
-        public void moveLeft()
-        {
-            this.x -= this.speed;
-        }
-        public void moveRight()
-        {
-            this.x += this.speed;
-        }
-
         public override void update()
         {
-
+            if(this.isLeftPress)
+            {
+                this.x -= this.speed;
+            }
+            if(this.isRightPress)
+            {
+                this.x += this.speed;
+            }
         }
     }
 }

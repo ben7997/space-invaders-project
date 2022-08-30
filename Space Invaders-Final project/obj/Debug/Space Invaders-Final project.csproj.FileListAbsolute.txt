@@ -7,3 +7,13 @@ C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Fina
 C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\bin\Debug\Space Invaders-Final project.pdb
 C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.exe
 C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.pdb
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\bin\Debug\Space Invaders-Final project.exe.config
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\bin\Debug\Space Invaders-Final project.exe
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\bin\Debug\Space Invaders-Final project.pdb
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.AssemblyReference.cache
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.SuggestedBindingRedirects.cache
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space_Invaders_Final_project.Game.resources
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.GenerateResource.cache
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.CoreCompileInputs.cache
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.exe
+C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.pdb

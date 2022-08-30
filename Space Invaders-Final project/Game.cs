@@ -10,14 +10,17 @@ namespace Space_Invaders_Final_project
 {
     internal class Game: Form
     {
+        private bool isLeftPress = false;
+        private bool isRightPress = false;
         private double score;
         private Timer timer1;
         private System.ComponentModel.IContainer components;
         private Player player = new Player();
-        private List<Entity> entities = new List<Entity>();
+        private List<Entity> entities = new List<Entity>(10);
         public Game() {
             this.InitializeComponent();
-            this.Invalidate();
+            entities.Add(this.player);
+            entities.Add(new Shot(202, 200));
         }
 
         private void InitializeComponent()
@@ -37,6 +40,7 @@ namespace Space_Invaders_Final_project
             this.Name = "Game";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
             this.ResumeLayout(false);
 
         }
@@ -44,7 +48,10 @@ namespace Space_Invaders_Final_project
         private void Game_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            player.draw(g);
+            foreach(Entity entity in entities)
+            {
+                entity.draw(g);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -58,14 +65,28 @@ namespace Space_Invaders_Final_project
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            Console.WriteLine(e.KeyCode);
             switch (e.KeyCode)
             {
                 case Keys.Left:
-                    player.moveLeft();
+                    player.LeftPress=true;
                     break;
                 case Keys.Right:
-                    player.moveRight();
+                    player.RightPress=true;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Game_KeyUp(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    player.LeftPress=false;
+                    break;
+                case Keys.Right:
+                    player.RightPress=false;
                     break;
                 default:
                     break;
