@@ -1,0 +1,9 @@
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.AssemblyReference.cache
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space_Invaders_Final_project.Game.resources
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.GenerateResource.cache
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.CoreCompileInputs.cache
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\bin\Debug\Space Invaders-Final project.exe.config
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\bin\Debug\Space Invaders-Final project.exe
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\bin\Debug\Space Invaders-Final project.pdb
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.exe
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.pdb

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Space_Invaders_Final_project
 {
-    internal class Spaceship : Entity
+    internal abstract class Spaceship : Entity
     {
         protected int hitPoints;
 
