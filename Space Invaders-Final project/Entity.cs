@@ -14,10 +14,12 @@ namespace Space_Invaders_Final_project
         protected int height;
         protected int width;
         protected int speed;
-        public void draw(Graphics graphics) {
+        public void draw(Graphics graphics)
+        {
             Pen selPen = new Pen(Color.Blue);
             graphics.DrawRectangle(selPen, x, y, height, width);
             graphics.Dispose();
         }
+        public abstract void update();
     }
 }

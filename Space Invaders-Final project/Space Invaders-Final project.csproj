@@ -41,6 +41,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Shot.cs" />
     <Compile Include="Spaceship.cs" />
   </ItemGroup>
   <ItemGroup>
