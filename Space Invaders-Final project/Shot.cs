@@ -10,15 +10,19 @@ namespace Space_Invaders_Final_project
     {
         public Shot(int x, int y)
         {
-            this.x = x;
+            this.height = 5;
+            this.width = 10;
+            this.x = x-this.height;
             this.y = y;
-            this.height = 10;
-            this.width = 5;
-            this.speed = 10;
+            this.speed = 12;
         }
         public override void update()
         {
             this.y -= this.speed;
+            if (this.y < 0)
+            {
+                isAlive = false;
+            }
         }
     }
 }

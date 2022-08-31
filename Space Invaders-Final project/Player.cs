@@ -19,6 +19,14 @@ namespace Space_Invaders_Final_project
             set { isRightPress = value; }
             get { return isRightPress; }
         }
+        public int Xposition
+        {
+            get { return x+(width/2); }
+        }
+        public int Yposition
+        {
+            get { return y; }
+        }
         public Player()
         {
             this.x = 202;

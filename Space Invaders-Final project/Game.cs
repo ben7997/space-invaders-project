@@ -20,7 +20,6 @@ namespace Space_Invaders_Final_project
         public Game() {
             this.InitializeComponent();
             entities.Add(this.player);
-            entities.Add(new Shot(202, 200));
         }
 
         private void InitializeComponent()
@@ -60,6 +59,7 @@ namespace Space_Invaders_Final_project
             {
                 entity.update();
             }
+            entities=entities.FindAll(entity => entity.IsAlive);
             this.Invalidate(); 
         }
 
@@ -72,6 +72,9 @@ namespace Space_Invaders_Final_project
                     break;
                 case Keys.Right:
                     player.RightPress=true;
+                    break;
+                case Keys.Space:
+                    entities.Add(new Shot(player.Xposition, player.Yposition));
                     break;
                 default:
                     break;
