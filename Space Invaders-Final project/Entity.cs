@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 
 namespace Space_Invaders_Final_project
 {
+    [Serializable]
+
     internal abstract class Entity
     {
         protected int x;
@@ -15,7 +17,6 @@ namespace Space_Invaders_Final_project
         protected int width;
         protected int speed;
         protected bool isAlive = true;
-        protected Pen selPen;
         public static System.Drawing.Size border;
 
         public bool IsAlive {
@@ -28,6 +29,7 @@ namespace Space_Invaders_Final_project
         }
         public void draw(Graphics graphics)
         {
+            Pen selPen =new Pen(Color.Black);
             graphics.DrawRectangle(selPen, x, y, width, height);   
         }
         public abstract void update();

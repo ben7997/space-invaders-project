@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace Space_Invaders_Final_project
 {
+    [Serializable]
     class Invader : Spaceship
     {
         private int direction = 1;
         public Invader()
         {
             this.x = 0;
-            this.y = 0;
+            this.y = 25;
             this.height = 25;
             this.width = 25;
             this.speed = 5;
-            this.selPen = new Pen(Color.Red);
         }
 
         public override void shoot(List<Entity> entities)

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Space_Invaders_Final_project
 {
+    [Serializable]
     internal class Player : Spaceship
     {
         private bool isLeftPress = false;
@@ -35,7 +36,6 @@ namespace Space_Invaders_Final_project
             this.height = 25;
             this.width = 25;
             this.speed = 10;
-            this.selPen = new Pen(Color.Black);
         }
         public override void update()
         {

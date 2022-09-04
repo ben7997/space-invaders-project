@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Space_Invaders_Final_project
 {
+    [Serializable]
     class Shot: Entity
     {
         public Shot(int x, int y)
@@ -16,7 +17,6 @@ namespace Space_Invaders_Final_project
             this.x = x;
             this.y = y;
             this.speed = 12;
-            this.selPen = new Pen(Color.Pink);
         }
         public override void update()
         {
