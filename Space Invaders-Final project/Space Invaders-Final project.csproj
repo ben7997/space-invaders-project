@@ -40,6 +40,7 @@
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Invader.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Shot.cs" />

@@ -9,6 +9,6 @@ namespace Space_Invaders_Final_project
     internal abstract class Spaceship : Entity
     {
         protected int hitPoints;
-
+        public abstract void shoot(List<Entity> entities);
     }
 }

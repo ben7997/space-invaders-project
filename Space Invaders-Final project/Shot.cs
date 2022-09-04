@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,12 @@ namespace Space_Invaders_Final_project
     {
         public Shot(int x, int y)
         {
-            this.height = 5;
-            this.width = 10;
-            this.x = x-this.height;
+            this.height = 10;
+            this.width = 5;
+            this.x = x;
             this.y = y;
             this.speed = 12;
+            this.selPen = new Pen(Color.Pink);
         }
         public override void update()
         {

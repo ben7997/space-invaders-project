@@ -15,11 +15,17 @@ namespace Space_Invaders_Final_project
         protected int width;
         protected int speed;
         protected bool isAlive = true;
+        protected Pen selPen;
+        public static System.Drawing.Size border;
         public bool IsAlive { get { return isAlive; } }
+
+        public Entity()
+        {
+
+        }
         public void draw(Graphics graphics)
         {
-            Pen selPen = new Pen(Color.Blue);
-            graphics.DrawRectangle(selPen, x, y, height, width);   
+            graphics.DrawRectangle(selPen, x, y, width, height);   
         }
         public abstract void update();
     }

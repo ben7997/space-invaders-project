@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Space_Invaders_Final_project
 {
-    internal class Player : Entity
+    internal class Player : Spaceship
     {
         private bool isLeftPress = false;
         private bool isRightPress = false;
@@ -34,17 +35,24 @@ namespace Space_Invaders_Final_project
             this.height = 25;
             this.width = 25;
             this.speed = 10;
+            this.selPen = new Pen(Color.Black);
         }
         public override void update()
         {
-            if(this.isLeftPress)
+            if (this.isLeftPress && x > 0)
             {
                 this.x -= this.speed;
             }
-            if(this.isRightPress)
+            if (this.isRightPress && x + this.width < border.Width)
             {
                 this.x += this.speed;
             }
+
         }
+        public override void shoot(List<Entity> entities)
+        {
+            entities.Add(new Shot(this.Xposition, this.Yposition));
+        }
+
     }
 }

@@ -10,16 +10,18 @@ namespace Space_Invaders_Final_project
 {
     internal class Game: Form
     {
-        private bool isLeftPress = false;
-        private bool isRightPress = false;
         private double score;
         private Timer timer1;
         private System.ComponentModel.IContainer components;
         private Player player = new Player();
         private List<Entity> entities = new List<Entity>(10);
-        public Game() {
+        public Game()
+        {
             this.InitializeComponent();
+            Entity.border = this.ClientSize;
             entities.Add(this.player);
+            entities.Add(new Invader());
+
         }
 
         private void InitializeComponent()
@@ -41,6 +43,7 @@ namespace Space_Invaders_Final_project
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
             this.ResumeLayout(false);
+
 
         }
 
@@ -74,7 +77,7 @@ namespace Space_Invaders_Final_project
                     player.RightPress=true;
                     break;
                 case Keys.Space:
-                    entities.Add(new Shot(player.Xposition, player.Yposition));
+                    player.shoot(entities);
                     break;
                 default:
                     break;
