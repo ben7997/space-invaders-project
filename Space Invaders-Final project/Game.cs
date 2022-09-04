@@ -14,20 +14,20 @@ namespace Space_Invaders_Final_project
         private Timer timer1;
         private System.ComponentModel.IContainer components;
         private Player player = new Player();
+        private Timer timer2;
         private List<Entity> entities = new List<Entity>(10);
         public Game()
         {
             this.InitializeComponent();
             Entity.border = this.ClientSize;
             entities.Add(this.player);
-            entities.Add(new Invader());
-
         }
 
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // timer1
@@ -35,15 +35,20 @@ namespace Space_Invaders_Final_project
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // Game
             // 
-            this.ClientSize = new System.Drawing.Size(405, 246);
+            this.ClientSize = new System.Drawing.Size(682, 382);
             this.Name = "Game";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Game_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
             this.ResumeLayout(false);
-
 
         }
 
@@ -61,6 +66,7 @@ namespace Space_Invaders_Final_project
             foreach(Entity entity in entities)
             {
                 entity.update();
+                entity.isColied(entities);
             }
             entities=entities.FindAll(entity => entity.IsAlive);
             this.Invalidate(); 
@@ -97,6 +103,11 @@ namespace Space_Invaders_Final_project
                 default:
                     break;
             }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            entities.Add(new Invader());
         }
     }
 }

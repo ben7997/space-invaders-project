@@ -19,6 +19,7 @@ namespace Space_Invaders_Final_project
             this.speed = 5;
             this.selPen = new Pen(Color.Red);
         }
+
         public override void shoot(List<Entity> entities)
         { 
             entities.Add(new Shot(this.x + width/2, this.y + height));
@@ -32,6 +33,17 @@ namespace Space_Invaders_Final_project
                 direction *= -1;
                 y += height;
             }
+        }
+        public override void isColied(List<Entity> entitys)
+        {
+           foreach(Entity entity in entitys)
+           {
+                if(entity is Shot && this.checkCollision(entity))
+                {
+                    this.isAlive=false;
+                    entity.IsAlive=false;
+                }
+           }
         }
     }
 }

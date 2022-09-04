@@ -17,7 +17,10 @@ namespace Space_Invaders_Final_project
         protected bool isAlive = true;
         protected Pen selPen;
         public static System.Drawing.Size border;
-        public bool IsAlive { get { return isAlive; } }
+
+        public bool IsAlive {
+            set { isAlive=value; }
+            get { return isAlive; } }
 
         public Entity()
         {
@@ -28,5 +31,28 @@ namespace Space_Invaders_Final_project
             graphics.DrawRectangle(selPen, x, y, width, height);   
         }
         public abstract void update();
+
+        protected bool checkCollision(Entity entity)
+        {
+            if (this.x+this.width<=entity.x)
+            {
+                return false;
+            }
+            if(this.y+this.height<=entity.y)
+            {
+                return false;
+            }
+            if(entity.x+entity.width<=this.x)
+            {
+                return false;
+            }
+            if(entity.y+entity.height<=this.y)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public abstract void isColied(List<Entity> list);
     }
 }

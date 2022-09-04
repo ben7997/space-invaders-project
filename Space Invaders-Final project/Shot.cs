@@ -26,5 +26,17 @@ namespace Space_Invaders_Final_project
                 isAlive = false;
             }
         }
+
+        public override void isColied(List<Entity> entitys)
+        {
+            return;
+            foreach (Entity entity in entitys)
+            {
+                if (entity is Invader && this.checkCollision(entity))
+                {
+                    this.isAlive=false;
+                }
+            }
+        }
     }
 }

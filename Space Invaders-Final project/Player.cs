@@ -53,6 +53,16 @@ namespace Space_Invaders_Final_project
         {
             entities.Add(new Shot(this.Xposition, this.Yposition));
         }
+        public override void isColied(List<Entity> entitys)
+        {
+            foreach (Entity entity in entitys)
+            {
+                if (entity is Invader && this.checkCollision(entity))
+                {
+                    this.hitPoints-=1;
+                }
+            }
+        }
 
     }
 }
