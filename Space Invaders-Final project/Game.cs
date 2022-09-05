@@ -15,7 +15,7 @@ namespace Space_Invaders_Final_project
         private double score;
         private Timer timer1;
         private System.ComponentModel.IContainer components;
-        private Player player = new Player();
+        private Player player;
         private Timer timer2;
         private ToolStrip toolStrip1;
         private ToolStripButton saveBtn;
@@ -25,6 +25,7 @@ namespace Space_Invaders_Final_project
         {
             this.InitializeComponent();
             Entity.border = this.ClientSize;
+            player = new Player(this.ClientSize.Width/2, this.ClientSize.Height);
             entities.Add(this.player);
         }
 
@@ -48,7 +49,7 @@ namespace Space_Invaders_Final_project
             // timer2
             // 
             this.timer2.Enabled = true;
-            this.timer2.Interval = 1000;
+            this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // toolStrip1
@@ -59,7 +60,7 @@ namespace Space_Invaders_Final_project
             this.LoadBtn});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(457, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(521, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -69,7 +70,7 @@ namespace Space_Invaders_Final_project
             this.saveBtn.Image = ((System.Drawing.Image)(resources.GetObject("saveBtn.Image")));
             this.saveBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(44, 28);
+            this.saveBtn.Size = new System.Drawing.Size(35, 22);
             this.saveBtn.Text = "Save";
             this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
@@ -79,13 +80,14 @@ namespace Space_Invaders_Final_project
             this.LoadBtn.Image = ((System.Drawing.Image)(resources.GetObject("LoadBtn.Image")));
             this.LoadBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LoadBtn.Name = "LoadBtn";
-            this.LoadBtn.Size = new System.Drawing.Size(46, 28);
+            this.LoadBtn.Size = new System.Drawing.Size(37, 22);
             this.LoadBtn.Text = "Load";
             this.LoadBtn.Click += new System.EventHandler(this.LoadBtn_Click);
             // 
             // Game
             // 
-            this.ClientSize = new System.Drawing.Size(457, 243);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(521, 326);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Game";
             this.Text = "Game";
@@ -154,10 +156,13 @@ namespace Space_Invaders_Final_project
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            entities.Add(new Invader());
+            if (Invader.enemyCount < 5)
+            { 
+                entities.Add(new Invader());
+            }
         }
 
-        private void saveBtn_Click(object sender, EventArgs e)
+            private void saveBtn_Click(object sender, EventArgs e)
         {
             using (Stream stream = File.Open("save.bin", FileMode.Create))
             {

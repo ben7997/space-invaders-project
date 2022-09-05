@@ -17,6 +17,7 @@ namespace Space_Invaders_Final_project
             this.x = x;
             this.y = y;
             this.speed = 12;
+            this.image = Image.FromFile("C:\\Users\\Neomi\\Desktop\\space invaders\\space-invaders-project\\Space Invaders-Final project\\assets\\shot.png");
         }
         public override void update()
         {

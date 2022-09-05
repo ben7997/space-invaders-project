@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Space_Invaders_Final_project
 {
@@ -17,6 +18,7 @@ namespace Space_Invaders_Final_project
         protected int width;
         protected int speed;
         protected bool isAlive = true;
+        protected Image image;
         public static System.Drawing.Size border;
 
         public bool IsAlive {
@@ -29,8 +31,7 @@ namespace Space_Invaders_Final_project
         }
         public void draw(Graphics graphics)
         {
-            Pen selPen =new Pen(Color.Black);
-            graphics.DrawRectangle(selPen, x, y, width, height);   
+            graphics.DrawImage(image, x, y, width, height);   
         }
         public abstract void update();
 

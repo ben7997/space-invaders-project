@@ -17,3 +17,4 @@ C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final pr
 C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.csproj.CoreCompileInputs.cache
 C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.exe
 C:\Users\bengo\source\repos\Space Invaders-Final project\Space Invaders-Final project\obj\Debug\Space Invaders-Final project.pdb
+C:\Users\Neomi\Desktop\space invaders\space-invaders-project\Space Invaders-Final project\obj\Debug\Space_Invaders_Final_project.Properties.Resources.resources

@@ -29,13 +29,14 @@ namespace Space_Invaders_Final_project
         {
             get { return y; }
         }
-        public Player()
+        public Player(int x, int y)
         {
-            this.x = 202;
-            this.y = 200;
             this.height = 25;
             this.width = 25;
+            this.x = x - width/2;
+            this.y = y - height;
             this.speed = 10;
+            this.image = Image.FromFile("C:\\Users\\Neomi\\Desktop\\space invaders\\space-invaders-project\\Space Invaders-Final project\\assets\\player.png");
         }
         public override void update()
         {
